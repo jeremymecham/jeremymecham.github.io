@@ -1,0 +1,1 @@
+document.getElementById("getdate").innerHTML = "Page Last Updated: " + document.lastModified;
