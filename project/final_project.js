@@ -41,20 +41,3 @@ photos.forEach(function(photo) {
     photo.addEventListener('click', enlargePhoto);
 });
 
-function loadHighQualityImages() {
-    var images = document.querySelectorAll('.photo img');
-    images.forEach(function(img) {
-        var highQualityUrl = img.dataset.src;
-        var highQualityImg = new Image();
-        highQualityImg.src = highQualityUrl;
-        highQualityImg.onload = function() {
-            // Replace placeholder with high-quality image
-            img.src = highQualityUrl;
-        };
-    });
-}
-
-// Load high-quality images when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", function() {
-    loadHighQualityImages();
-});
